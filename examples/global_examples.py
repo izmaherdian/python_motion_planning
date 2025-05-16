@@ -5,7 +5,10 @@
 @update: 2024.11.22
 """
 import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+src_path = os.path.join(parent_dir, 'src')
+sys.path.append(src_path)
 from python_motion_planning.utils import Grid, Map, SearchFactory
 
 if __name__ == '__main__':

@@ -5,7 +5,12 @@
 @update: 2025.4.11
 """
 import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+src_path = os.path.join(parent_dir, 'src')
+sys.path.append(src_path)
+
 from python_motion_planning import *
 
 if __name__ == '__main__':
